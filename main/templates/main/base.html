@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+{% load static %}
+
+{% block css %}
+{% block head_css_site %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main/header_footer.css' %}">
+{% endblock head_css_site %}
+{% endblock css %}
+
+    <header>
+        <div class="logo">
+            <h1><a href="/">Portfolio</a></h1>
+        </div>
+        <div class="nav">
+            <ul class="nav-link">
+                <li><a href="/">Home</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="/viewList">All your todolist</a></li>
+                    <li><a href="/weather">Weather</a></li>
+                    <li><a href="/">Hello,{{request.user}}</a></li>
+                    <li><a href="/logout">Log out</a></li>
+                {% else %}
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Register</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="signin">
+            <a href="/contact"><button>Contact</button></a>
+        </div>
+    </header>
+    <div class="content">
+        {% block content %}
+        <h2>Elegant Navbar</h2>
+        <p>Using HTML & CSS only</p>
+        {% endblock %}
+    </div>
+    <footer>
+        <p>
+            My first protfolio
+        </p>
+    </footer>
+
+</html>

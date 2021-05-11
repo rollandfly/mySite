@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+  {% load static %}  
+  {% block head_css_site %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'register/Register.css' %}">
+  {% endblock head_css_site %}
+
+{% block content %}
+<div class="container">
+  <div class="frame">
+    <h2>Register Form</h2>
+    <form method="post" class="register">
+        {% csrf_token %}
+        {% for field in form %}
+        <label>{{field.label}}</label>
+        <div class="input-wrap">
+          {{field}}
+        </div>
+        {% endfor %}
+        <input type="submit" name="Create User">
+    </form>
+  </div>
+</div>
+{% endblock %}

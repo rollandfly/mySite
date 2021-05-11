@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+
+:root{
+  --principale: rgb(227, 246, 252);
+  --secondaire: rgb(87, 81, 81);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--principale);
+}
+
+.content {
+  position: relative;
+  color: var(--secondaire);
+  font-family: "Recursive", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 220px;
+}
+
+.content h2 {
+  font-size: 50px;
+}
+
+.content p {
+  font-size: 15px;
+}
+

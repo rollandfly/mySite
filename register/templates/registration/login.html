@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+  
+  {% load static %}  
+  {% block head_css_site %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'register/Register.css' %}">
+  {% endblock head_css_site %}
+
+{% block content %}
+
+  <div class="container">
+    <div class="frame">
+      <h2>Sign Up</h2>
+      <form method="post" class="login">
+        {% csrf_token %}
+        {% for field in form %}
+          <label>{{field.label}}</label>
+          <div class="input-wrap">
+            {{field}}
+          </div>
+        {% endfor %}
+
+        <input type="submit" name="Connexion User">
+      </form>        
+    <h4>Don't have an accoount? Create one</h4> 
+    <a href="/register">here</a>
+      <div class="input-wrap">
+        {% for message in messages %}
+        <p class="message">{{message}}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
