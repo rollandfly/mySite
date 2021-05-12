@@ -13,9 +13,10 @@
         <div class="logo">
             <h1><a href="/">Portfolio</a></h1>
         </div>
-        <div class="nav">
+        <div class="nav" id='nav'>
             <ul class="nav-link">
                 <li><a href="/">Home</a></li>
+                <li><a href="/calculate">Calculatrice</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="/viewList">All your todolist</a></li>
                     <li><a href="/weather">Weather</a></li>

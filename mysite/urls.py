@@ -10,4 +10,6 @@ urlpatterns = [
     path('register/', views.registerPage, name="register"),
     path('login/', views.loginPage, name="register"),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('', include('weather.urls')),
+    path('',include('calculate.urls')),
 ]
