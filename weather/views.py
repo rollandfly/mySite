@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import requests
 # Create your views here.
+
 def weatherPage(request):
   url = 'http://api.openweathermap.org/data/2.5/weather?q={}&units=metric&appid=64b431b4e7251052ae95104f0f507716'
   city="Las Vegas"

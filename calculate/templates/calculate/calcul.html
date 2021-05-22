@@ -28,7 +28,7 @@
     <div @click="append(2)" class="btn">2</div>
     <div @click="append(1)" class="btn">1</div>
     <div @click="add" class="btn operateur">+</div>
-    <div @click="append(7)"class="btn calculator-zero">0</div>
+    <div @click="append(0)"class="btn calculator-zero">0</div>
     <div @click="dot" class="btn">.</div>
     <div @click="equal" class="btn operateur">=</div>
   </div>
@@ -39,7 +39,7 @@
       el:'#calculator',
       data:{
         previous:'',
-        current:'123',
+        current:'',
         operator:null,
         operatorClicked: false,
       },
