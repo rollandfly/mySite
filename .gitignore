@@ -3,4 +3,3 @@ db.sqlite3
 .replit
 poetry.lock
 pyproject.toml
-README.md
